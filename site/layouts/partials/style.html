@@ -1,7 +1,9 @@
 <style>
 {{ if .IsHome }}
 {{- $default_style := resources.Get "sass/default.scss" | resources.ToCSS -}}
+{{ if $default_style }}
 {{- $default_style.Content | safeCSS -}}
+{{ end }}
 {{ else }}
 {{- $activity_style := resources.Get "sass/activity.scss" | resources.ToCSS | minify -}}
 {{- $activity_style.Content | safeCSS -}}
