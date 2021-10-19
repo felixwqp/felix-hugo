@@ -1,17 +1,26 @@
 baseURL = "https://hugo-theme-shell.netlify.app/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Felix Wang Space"
 theme = "hugo-theme-shell"
 
 [Params]
     [Params.Terminal]
     schema = "monokai"
+    userName = "felix.wang"
+    pcName = "myPortal"
+    workDir = "discovery"
+    profile = "profile.txt"
+    ps1Delay = 0 # prompt speed : [userName]@[pcName]:~/$ , [userName]@[pcName]:~/[workDir]$
+    stdoutDelay = 15 # stdout speed : [description] , files in Params.Tree
+    commandDelay = 15 # command speed : cd [workDir] , cat [profile] , tree ./[folderName]/
+   description = "/description.md"
 
     [Params.Tree]
     use = true
+    folderName="Discovery"
     files = [
-        ["C/C++", "https://www.example.com/"],
-        ["Python", "https://www.example.com/"],
-        ["Go", "/works/go.md"],
-        ["Hugo", "/works/hugo.md"]
+        ["Blogs", "https://felixwqp.github.io"],
+        ["Linkedin", "https://www.linkedin.com/in/felix-wang-5a171312b/"],
+        #["Go", "/works/go.md"],
+        #["Hugo", "/works/hugo.md"]
     ]
